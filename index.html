@@ -99,10 +99,24 @@
             </div>
         </section>
 
-        <!-- RSVP Section -->
-        <section class="rsvp-section">
-            <h2>We Would Love Your Presence</h2>
-           
+        <!-- Comments / Wishes Section -->
+        <section class="comments-section">
+            <div class="comments-wrapper">
+                <h2>Send Your Wishes</h2>
+
+                <!-- Form -->
+                <form id="commentForm" class="comment-form">
+                    <input id="commentName" name="name" type="text" placeholder="Your name" required autofocus />
+                    <textarea id="commentText" name="message" placeholder="Write your congratulations..." required></textarea>
+                    <button type="submit" class="submit-btn">Send</button>
+                </form>
+
+                <!-- Comments list -->
+                <div class="comments-list" id="commentsList">
+                    <h3>Messages</h3>
+                    <div id="commentsContainer"></div>
+                </div>
+            </div>
         </section>
 
         <!-- Music Control Button -->
@@ -116,6 +130,27 @@
             <p>&copy; 2026 Mohamed & Jihad. All rights reserved.</p>
         </footer>
     </div>
+
+    <!-- Firebase (Realtime Database) - replace config below with your project's values -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <script>
+        // TODO: Replace with your Firebase project config
+        var firebaseConfig = {
+            apiKey: "AIzaSyAYbOMDwVSSS1tQh1nOS0ja20tIApglY6E",
+            authDomain: "mywedding-9252c.firebaseapp.com",
+            databaseURL: "https://mywedding-9252c-default-rtdb.firebaseio.com",
+            projectId: "mywedding-9252c",
+            storageBucket: "mywedding-9252c.firebasestorage.app",
+            messagingSenderId: "801793375088",
+            appId: "1:801793375088:web:c9a2696ee6327343dcedb5"
+        };
+        // Initialize Firebase (will be used in script.js)
+        if (!window.firebase.apps || !window.firebase.apps.length) {
+            firebase.initializeApp(firebaseConfig);
+        }
+    </script>
 
     <script src="script.js"></script>
 </body>
