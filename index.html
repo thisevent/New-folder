@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Music from Local File -->
+    <!-- Add your music file: Place your audio file (MP3, WAV, OGG) in the same folder as this HTML file -->
+    <!-- Then update the src path below to match your file name -->
+    <!-- Example: src="wedding-music.mp3" or src="./audio/your-song.mp3" -->
+    <audio id="weddingMusic" autoplay muted loop>
+        <source src="Ed Sheeran - Perfect.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="header-content">
+                <p class="welcome-text">Together with their families</p>
+                <h1 class="main-title">Together in Love</h1>
+            </div>
+        </header>
+
+        <!-- Couple Names Section -->
+        <section class="couple-section">
+            <div class="couple-names">
+                <h2 class="groom-name">Mohamed</h2>
+                <span class="and-text">&</span>
+                <h2 class="bride-name">Jihad</h2>
+            </div>
+            <p class="love-text">Request the honour of your presence at their wedding</p>
+        </section>
+
+        <!-- Photo Slider Section -->
+        <section class="slider-section">
+            <div class="slider-container">
+                <div class="slider">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop" alt="Wedding photo 1" class="slide">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop" alt="Wedding photo 2" class="slide">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&h=600&fit=crop" alt="Wedding photo 3" class="slide">
+                   
+                </div>
+                <button class="slider-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="slider-btn next" onclick="changeSlide(1)">&#10095;</button>
+                <div class="slider-dots">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+               
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Details Section -->
+        <section class="details-section">
+            <div class="details-content">
+                <div class="detail-card">
+                    <div class="detail-icon">📅</div>
+                    <h3>Date</h3>
+                    <p>March 22, 2026</p>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">🕐</div>
+                    <h3>Time</h3>
+                    <p>8:00 PM</p>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">📍</div>
+                    <h3>Location</h3>
+                    <p>Logistic House Hotel , Nasr City</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Countdown Section -->
+        <section class="countdown-section">
+            <h2>Countdown to Our Big Day</h2>
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span id="days" class="countdown-number">0</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="hours" class="countdown-number">0</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="minutes" class="countdown-number">0</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="seconds" class="countdown-number">0</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- RSVP Section -->
+        <section class="rsvp-section">
+            <h2>We Would Love Your Presence</h2>
+           
+        </section>
+
+        <!-- Music Control Button -->
+        <div class="music-control">
+            <button id="musicToggle" class="music-btn" title="Toggle Music (Volume)">🔊</button>
+            <div class="music-tooltip">Music</div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Mohamed & Jihad. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
